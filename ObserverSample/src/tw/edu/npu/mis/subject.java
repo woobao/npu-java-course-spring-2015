@@ -42,4 +42,13 @@ public class subject {
         mObservers.add(o);
         
     }
+    /**
+     * detach到ArrayList
+     * @param o 
+     */
+    public void detach(observer o) {
+        mObservers.remove(o);
+    }
+    
 }
+
