@@ -49,6 +49,13 @@ public class subject {
     public void detach(observer o) {
         mObservers.remove(o);
     }
-    
+     /**
+     * 通報view到update
+     */
+    public void notifyObserver() {
+        for (observer o : mObservers){
+            o.update();
+        }
+    }
 }
 
