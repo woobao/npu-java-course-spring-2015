@@ -50,9 +50,9 @@ public class Model extends subject{
      */
     public void setData(String data) {
         mData = data;
-         notifyObserver();
+        notifyObserver();
     }
 
-   
+    
 
 }
