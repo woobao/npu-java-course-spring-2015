@@ -30,7 +30,7 @@ package tw.edu.npu.mis;
  *
  * @author STP
  */
-public class AlternativeView implements Observer , Showable{
+public class AlternativeView implements observer , showable{
     private final Model mModel;
     //private boolean mIsValid;
     
