@@ -25,21 +25,48 @@
  */
 package tw.edu.npu.mis;
 
+
 /**
  *
  * @author STP
  */
-public class AlternativeView implements observer , showable{
-  
-
-    @Override
-    public void update() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+public class AlternativeView implements Observer , Showable{
+    private final Model mModel;
+    //private boolean mIsValid;
+    
+    private final String mName;
+    private final Window mWindow;
+    //private final Model mModel;
+    
+/**
+ * AlternativeView class定義建構子
+ * @param name  
+ * @param window
+ * @param model 
+ */
+    public AlternativeView(String name, Window window, Model model) {
+        mName = name;
+        mWindow = window;
+        mModel = model;
+        mModel.atch(this);
+    }
+    
+    /**
+     * 
+     */
+    private void invalidate() {
+        mWindow.schduleRedraw(this);
     }
 
-    @Override
     public void onDraw() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("AlternativeView (" + mName + "): "+ new StringBuilder(mModel.getData()).reverse());
+        
+    }
+    
+    @Override
+    public void update() {
+        invalidate();
+        
     }
     
 }

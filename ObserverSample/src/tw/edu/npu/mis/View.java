@@ -65,7 +65,7 @@ public class View implements observer, showable{
 
     @Override
     public void update() {
-    
+    invalidate();
     }
 
 }
