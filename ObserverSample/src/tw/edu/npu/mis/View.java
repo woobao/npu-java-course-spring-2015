@@ -46,26 +46,24 @@ public class View implements observer, showable{
         mName = name;
         mWindow = window;
         mModel = model;
-        mModel.atch(this);
+        mModel.attach(this);
     }
-
     /**
      * Invalidate the view, which indicates it needs to be redrawn later.
      */
     public void invalidate() {
         mWindow.schduleRedraw(this);
     }
-
     /**
      * Show the content of the model on the console.
      */
     public void onDraw() {
-        System.out.println("View (" + mName + "): " + mModel.getData());
+    System.out.println("View (" + mName + "): " + mModel.getData());
     }
 
     @Override
     public void update() {
-    invalidate();
+        
     }
 
 }

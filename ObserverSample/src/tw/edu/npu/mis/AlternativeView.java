@@ -48,7 +48,7 @@ public class AlternativeView implements observer , showable{
         mName = name;
         mWindow = window;
         mModel = model;
-        mModel.atch(this);
+        mModel.attach(this);
     }
     
     /**
