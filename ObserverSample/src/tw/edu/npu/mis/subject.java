@@ -38,7 +38,7 @@ public class subject {
      * attach到ArrayList
      * @param o 
      */
-    public void attach(observer o) {
+    public void atch(observer o) {
         mObservers.add(o);
         
     }

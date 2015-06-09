@@ -30,16 +30,23 @@ package tw.edu.npu.mis;
  *
  * @author Samael Wang <freesamael@gmail.com>
  */
-public class View {
+public class View implements observer, showable{
 
     private final String mName;
     private final Window mWindow;
     private final Model mModel;
+    /**
+     * view class定義建構子
+     * @param name
+     * @param window
+     * @param model 
+     */
 
     public View(String name, Window window, Model model) {
         mName = name;
         mWindow = window;
         mModel = model;
+        mModel.atch(this);
     }
 
     /**
@@ -54,6 +61,11 @@ public class View {
      */
     public void onDraw() {
         System.out.println("View (" + mName + "): " + mModel.getData());
+    }
+
+    @Override
+    public void update() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
