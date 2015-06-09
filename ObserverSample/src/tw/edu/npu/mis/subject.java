@@ -34,5 +34,12 @@ import java.util.List;
  */
 public class subject {
     private List<observer> mObservers = new ArrayList<>();
-  
+   /**
+     * attach到ArrayList
+     * @param o 
+     */
+    public void attach(observer o) {
+        mObservers.add(o);
+        
+    }
 }
